@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "c36a20a6-009b-4ba4-bdf0-6df732109fda",
+		"name": "Calenda- Jefrey López",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "AgregarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Jefrey\",\r\n    \"email\":\"jefrey@gmail.com\",\r\n    \"password\":\"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOGIN",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\":\"jefrey@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RENEW",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZlYzAwZTI3OTVlZGMwMWZhNjVjMTYiLCJuYW1lIjoiSmVmcmV5IiwiaWF0IjoxNjc4MDI3MDYzLCJleHAiOjE2NzgwMzQyNjN9.sVkqOC9tMGhlpioNNbZyjroLQDkcXuj7sllGn60gky0",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/auth/renew",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"renew"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MostarEvents",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZlYjgxODQ3ZTZkMmMwNTM4OTk5NWIiLCJuYW1lIjoiSmVmcmV5IiwiaWF0IjoxNjc3NjM4MTQ5LCJleHAiOjE2Nzc2NDUzNDl9.UuEnj-EtjIYV39CYvOzNAr0eScEkSP6Trwt0OWZveNg",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/events/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarEvent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZlYzAwZTI3OTVlZGMwMWZhNjVjMTYiLCJuYW1lIjoiSmVmcmV5IiwiaWF0IjoxNjc4MDI3Mzk2LCJleHAiOjE2NzgwMzQ1OTZ9.lyAKw0HLlalb-Wqo15BciMaiqRzcxLCGeGtZa8FMrM0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\":\"Partido de Futbol\",\r\n   \"notes\":\"Empezar el partdido, el clasico\",\r\n   \"start\":\"2018-03-29\",\r\n   \"end\":\"2018-03-30\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/events/agregar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						"agregar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EliminarEvent",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZlYjgxODQ3ZTZkMmMwNTM4OTk5NWIiLCJuYW1lIjoiSmVmcmV5IiwiaWF0IjoxNjc3NjM4NTQ3LCJleHAiOjE2Nzc2NDU3NDd9.5tsFv4Xt_961xUarEa9-xPM69g9OLegHKyFdmuAaVms",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/events/eliminar/63feb95a0be0e39ef53bb50c",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						"eliminar",
+						"63feb95a0be0e39ef53bb50c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarEvent",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2M2ZlYzAwZTI3OTVlZGMwMWZhNjVjMTYiLCJuYW1lIjoiSmVmcmV5IiwiaWF0IjoxNjc4MDI3Mzk2LCJleHAiOjE2NzgwMzQ1OTZ9.lyAKw0HLlalb-Wqo15BciMaiqRzcxLCGeGtZa8FMrM0",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\":\"Partido de basquetball\",\r\n   \"notes\":\"Partido de los Lakers y Bulls\",\r\n   \"start\":\"2019-03-29\",\r\n   \"end\":\"2019-03-30\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/events/actualizar/6404aab32d6cabf087399cc8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"events",
+						"actualizar",
+						"6404aab32d6cabf087399cc8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
